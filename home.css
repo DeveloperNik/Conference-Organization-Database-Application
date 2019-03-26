@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+/* Style the header */
+.head1 {
+    /*background-color: rgb(48, 162, 238);*/
+    background-image: url(images/Banner.jpg);
+    background-position: center;
+    padding: 120px;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Styling the menu bar */
+.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #028090;
+    border: 1px solid #555;
+    height: 100%;
+}
+
+/* Styling the individual selections in the menu bar */
+.sidenav a {
+    display: block;
+    text-align: center;
+    color: #f0f3bd;
+    font-size: 20px;
+    padding: 8px 16px;
+    text-decoration: none;
+    list-style-type: none;
+    border-bottom: 1px solid #555;
+}
+
+.sidenav a:last-child {
+    border-bottom: none;
+}
+
+/* Change the link color on hover */
+.sidenav a:hover {
+    background-color: #00a896;
+    color: black;
+}
+
+.sidenav a:hover {
+    background-color: #00a896;
+    color: black;
+}
+
+.sidenav a.active {
+    background-color: #00a896;
+}
+
+/* Style the content */
+.content {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #00a896;
+    padding: 10px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #00a896;
+    background-position: center;
+    padding: 120px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}

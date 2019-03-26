@@ -1,0 +1,21 @@
+The pages of the application and what they do:
+    - Home
+        Main naviation portal
+    - Schedule
+        Show scheduled sessions by each day (or week)
+        Have a "switch session" option (to change a session to a new time,day, and location)
+    - Committees
+        Show all subcommittees (list) and be able to show the members of each subcommittee (by clicking on a subcommittee)
+    - Sponsors
+        Show the sponsors, sorted by level
+        Have an "add sponsor" option
+        Have a "delete sponsor" option (have warning that this will also delete all associated attendees)
+    - Attendees
+        Show all types of Attendees (list) and be able to show all of the members of each type (by clicking on a type)
+        Have an "add attendee" option
+    - Hotel
+        Show each room (list), and be able to show which students are in each room
+    - Jobs
+        Show all jobs, sorted by company
+    - Finances
+        Total intake of the conference, and breakdown by registration/sponsorship
