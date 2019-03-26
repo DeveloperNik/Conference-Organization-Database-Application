@@ -1,0 +1,17 @@
+Functional Requirements:
+    Display:
+    - Display all members of a sub-committee (choose sub-committee from a dropdown menu)
+    - Display all students in a particular hotel room
+    - Display conference schedule for a particular day
+    - List the sponsors and their level of sponsorship
+    - List the jobs that a particular company has available
+    - List all jobs available
+    - List all student, professional, and sponsor attendees in separate lists
+    - Show total intake of conference
+        breakdown: total registration amounts, total sponsorship amounts
+    
+    Forms:
+    - Add a new attendee. If attendee is student, add them to a hotel room
+    - Add a new sponsoring company
+    - Delete a sponsoring company (+ associated attendees)
+    - Switch a session to a different day/time/location
