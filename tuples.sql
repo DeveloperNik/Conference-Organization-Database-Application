@@ -75,16 +75,31 @@ values
     ('10000000', 'Eugene', 'Fitzherbert');
 insert into Attendees
 values
+    ('15000000', 'Ulysses', 'Grant');
+insert into Attendees
+values
     ('20000000', 'Mary Lou', 'Appleton');
+insert into Attendees
+values
+    ('25000000', 'MJ', 'Watson');
 insert into Attendees
 values
     ('30000000', 'Sarah', 'Alec');
 insert into Attendees
 values
+    ('35000000', 'Ben', 'Affleck');
+insert into Attendees
+values
     ('40000000', 'James', 'Monroe');
 insert into Attendees
 values
+    ('45000000', 'Jimbo', 'Jones');
+insert into Attendees
+values
     ('50000000', 'Neville', 'Longbottom');
+insert into Attendees
+values
+    ('55000000', 'Ron', 'Weasley');
 insert into Attendees
 values
     ('60000000', 'Francis', 'Saviour');
@@ -97,6 +112,21 @@ values
 insert into Attendees
 values
     ('90000000', 'Xavier', 'Pablo');
+insert into Student
+values
+    ('15000000', '203');
+insert into Student
+values
+    ('25000000', '205');
+    insert into Student
+values
+    ('45000000', '205');
+insert into Student
+values
+    ('35000000', '205');
+insert into Student
+values
+    ('55000000', '310');
 insert into Student
 values
     ('20000000', '101');
