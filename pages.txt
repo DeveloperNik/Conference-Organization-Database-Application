@@ -1,6 +1,6 @@
 The pages of the application and what they do:
     - Home
-        Main naviation portal
+        Main navigation portal
     - Schedule
         Show scheduled sessions by each day (or week)
         Have a "switch session" option (to change a session to a new time,day, and location)
@@ -15,7 +15,7 @@ The pages of the application and what they do:
         Have an "add attendee" option
     - Hotel
         Show each room (list), and be able to show which students are in each room
-    - Jobs
+    - Jobs (done)
         Show all jobs, sorted by company
     - Finances
         Total intake of the conference, and breakdown by registration/sponsorship
