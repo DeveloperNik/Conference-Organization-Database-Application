@@ -85,6 +85,11 @@
             <input type="text" name="lname">
             <p> Is this attendee a 'Sponsor', 'Student', or 'Professional'?</p>
             <input type="text" name="type">
+            <select name="needsRoom" >
+				<option value="">If the attendee is a student, do they need a room?</option>
+				<option value="roomYes">Yes</option>
+				<option value="roomNo">No</option>
+			</select>
             <p> If the attendee is a sponsor, please enter their company below:</p>
             <input type="text" name="company">
             <p> If this is the first sponsor of the company, please enter the company's donation below:</p>

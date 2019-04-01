@@ -36,6 +36,7 @@
             $newType = $_POST["type"];
             $newCompany = $_POST["company"];
             $newDonation = $_POST["donation"];
+            $needsRoom = $_POST["needsRoom"];
             $newEmailsSent = 0;
             $er = 0;
             if($newType != "student" && $newType != "Student" && $newType != "professional" && $newType != "Professional" && $newType != "sponsor" && $newType != "Sponsor"){
@@ -77,14 +78,16 @@
                 $addStmt = "INSERT INTO attendees VALUES(?,?,?)";
                 $stmt = $pdo->prepare($addStmt);
                 $stmt->execute([$newID,$newFname,$newLname]);
-                if($newRoomOccupancy == 1){
+                if($needsRoom == "roomYes"){
+                    if($newRoomOccupancy == 1){
                     $addRoomStmt = "INSERT INTO room VALUES(?,?)";
                     $stmt = $pdo->prepare($addRoomStmt);
                     $stmt->execute([$newRoomID,$newRoomOccupancy]);
-                }else{
+                    }else{
                     $updateRoomStmt = "UPDATE room SET occupancy = ? WHERE roomID=?";
                     $stmt = $pdo->prepare($updateRoomStmt);
                     $stmt->execute([$newRoomOccupancy,$newRoomID]);
+                    }
                 }
                 $addStudentStmt = "INSERT INTO student VALUES(?,?)";
                 $stmt = $pdo->prepare($addStudentStmt);
@@ -111,7 +114,6 @@
                     $stmt->execute([$newID,$newCompany]);
                 }
               }
-
             /*echo $newType;
             echo $newCompany;
             echo $newID;
@@ -123,7 +125,7 @@
 			<h2>Students</h2>
 			<?php
 			$pdo = new PDO('mysql:host=localhost;dbname=conference', "root", "");
-			echo "<table><tr><th>ID</th><th>First Name</th><th>Last Name</th></tr>";
+			echo "<table style='border: solid 1px black;'><tr><th>ID</th><th>First Name</th><th>Last Name</th></tr>";
 
 
 			$sql = "select ID,fname,lname from attendees natural join student";
@@ -132,7 +134,7 @@
 			#stmt contains the result of the program execution
 			#use fetch to get results row by row.
 			while ($row = $stmt->fetch()) {
-				echo "<tr><td>".$row["ID"]."</td><td>".$row["fname"]."</td><td>".$row["lname"]."</td></tr>";
+				echo "<tr><td style='width: 150px; border: 1px solid black;'>".$row["ID"]."</td><td style='width: 150px; border: 1px solid black;'>".$row["fname"]."</td><td style='width: 150px; border: 1px solid black;'>".$row["lname"]."</td></tr>";
 			}
             ?>
             </table>
@@ -140,7 +142,7 @@
             <h2>Professionals</h2>
             <?php
 			$pdo = new PDO('mysql:host=localhost;dbname=conference', "root", "");
-			echo "<table><tr><th>ID</th><th>First Name</th><th>Last Name</th></tr>";
+			echo "<table style='border: solid 1px black;'><tr><th>ID</th><th>First Name</th><th>Last Name</th></tr>";
 
 
 			$sql = "select ID,fname,lname from attendees natural join professional";
@@ -149,7 +151,7 @@
 			#stmt contains the result of the program execution
 			#use fetch to get results row by row.
 			while ($row = $stmt->fetch()) {
-				echo "<tr><td>".$row["ID"]."</td><td>".$row["fname"]."</td><td>".$row["lname"]."</td></tr>";
+				echo "<tr><td style='width: 150px; border: 1px solid black;'>".$row["ID"]."</td><td style='width: 150px; border: 1px solid black;'>".$row["fname"]."</td><td style='width: 150px; border: 1px solid black;'>".$row["lname"]."</td></tr>";
 			}
             ?>
             </table>
@@ -157,7 +159,7 @@
             <h2>Sponsors</h2>
 			<?php
 			$pdo = new PDO('mysql:host=localhost;dbname=conference', "root", "");
-			echo "<table><tr><th>ID</th><th>First Name</th><th>Last Name</th></tr>";
+			echo "<table style='border: solid 1px black;'><tr><th>ID</th><th>First Name</th><th>Last Name</th></tr>";
 
 
 			$sql = "select ID,fname,lname from attendees natural join sponsor";
@@ -166,7 +168,7 @@
 			#stmt contains the result of the program execution
 			#use fetch to get results row by row.
 			while ($row = $stmt->fetch()) {
-				echo "<tr><td>".$row["ID"]."</td><td>".$row["fname"]."</td><td>".$row["lname"]."</td></tr>";
+				echo "<tr><td style='width: 150px; border: 1px solid black;'>".$row["ID"]."</td><td style='width: 150px; border: 1px solid black;'>".$row["fname"]."</td><td style='width: 150px; border: 1px solid black;'>".$row["lname"]."</td></tr>";
 			}
             ?>
             </table>
